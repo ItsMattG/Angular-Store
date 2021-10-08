@@ -1,0 +1,18 @@
+main {
+    width: 90%;
+    margin: auto;
+    padding: 20px 15px;
+
+    .banners {
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 50%;
+            margin-right: 10px;
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+}
