@@ -6,6 +6,7 @@ export const initialState = {
 };
 
 export function ShopReducer(state = initialState, action: ActionsUnion) {
+  console.log(action);
   switch (action.type) {
     case ActionTypes.LoadSuccess:
       return {

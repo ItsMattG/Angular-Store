@@ -8,10 +8,11 @@ import { Product } from '../product/product.component';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private store: Store<{ items: []; cart: [] }>) {
+  constructor(private store: Store<{ shop: { items: []; cart: [] } }>) {
     store.pipe(select('shop')).subscribe((data) => (this.cart = data.cart));
   }
 
   cart: Product[] = [];
+
   ngOnInit() {}
 }

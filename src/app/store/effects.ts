@@ -7,11 +7,6 @@ import { ProductsService } from '../products.service';
 
 @Injectable()
 export class ShopEffects {
-  constructor(
-    private actions$: Actions,
-    private productsService: ProductsService
-  ) {}
-
   @Effect()
   loadProducts$ = this.actions$.pipe(
     ofType(ActionTypes.LoadItems),
@@ -24,4 +19,9 @@ export class ShopEffects {
       )
     )
   );
+
+  constructor(
+    private actions$: Actions,
+    private productsService: ProductsService
+  ) {}
 }
